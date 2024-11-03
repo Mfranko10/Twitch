@@ -5,6 +5,5 @@
     "No te rindas, el principio siempre es lo más difícil.",
     "El éxito no es la clave de la felicidad; la felicidad es la clave del éxito.",
     "No puedes cambiar lo que está fuera de ti, pero puedes cambiar lo que está dentro.",];
-    const indiceAleatorio = Math.floor(Math.random() * frases.length);
-    frases[indiceAleatorio];
+    frases[Math.floor(Math.random() * frases.length)];
 }
