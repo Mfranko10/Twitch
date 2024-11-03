@@ -1,1 +1,3 @@
-document.querySelector('p').innerHTML = 'Hello, World!';
+{
+  'Hola mundo'
+}
