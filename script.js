@@ -1,13 +1,18 @@
 {
-  var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://frasedeldia.azurewebsites.net/api/phrase');
-xhr.onload = function() {
-    if (xhr.status === 200) {
-        console.log(xhr.responseText);
-    }
-    else {
-        console.log('Error');
-    }
+  const url = 'https://palavras-aleatorias.p.rapidapi.com/words/5/2';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '71ad27b963mshe2e5032b7150432p188038jsnbf44aff87d28',
+		'x-rapidapi-host': 'palavras-aleatorias.p.rapidapi.com'
+	}
 };
-xhr.send();
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
 }
